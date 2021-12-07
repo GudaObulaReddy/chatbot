@@ -30,7 +30,8 @@ class Log:
         #records.insert_one(cases_dict)
 
     def getcasesForEmail(self, search,botmessage,dbConn):
-        records = dbConn.cases_records
+        records = dbConn.chat_records
         print(records)
-        return records.find_one({'search': search})
+        #return records.find_one({'search': search})
+        return records.find_one()
 
